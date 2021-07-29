@@ -1,8 +1,10 @@
-import styles from "../styles/Home.module.css";
+import Hero from "../components/layout/sections/Hero";
 
 function Home(): JSX.Element {
     return (
-        <h1 className={styles.title}>Hello !</h1>
+        <div className="bg-gray-50">
+            <Hero />
+        </div>
     );
 }
 

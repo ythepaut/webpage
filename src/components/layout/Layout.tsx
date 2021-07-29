@@ -1,4 +1,5 @@
-import styles from "../styles/Layout.module.css";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 interface Props {
     children: JSX.Element;
@@ -6,11 +7,13 @@ interface Props {
 
 function Layout({children}: Props): JSX.Element {
     return (
-        <div className={styles.container}>
-            <main className={styles.main}>
+        <>
+            <Nav />
+            <main>
                 {children}
             </main>
-        </div>
+            <Footer />
+        </>
     );
 }
 
