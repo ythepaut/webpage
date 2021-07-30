@@ -1,4 +1,8 @@
 module.exports = {
+    reactStrictMode: true,
+    env: {
+        RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+    },
     webpack: (config, _) => {
         config.module.rules.push(
             {
