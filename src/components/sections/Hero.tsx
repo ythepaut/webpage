@@ -37,12 +37,10 @@ function Hero(): JSX.Element {
                     <FontAwesomeIcon icon={faLinkedin} />&nbsp;
                     LinkedIn
                 </a>
-                <a href="#contact" className="text-xl text-indigo-100 tracking-wide transform transition hover:text-white hover:scale-110">
-                    <Link to="contact" smooth={true} className="">
-                        <FontAwesomeIcon icon={faEnvelope} />&nbsp;
-                        Contact
-                    </Link>
-                </a>
+                <Link to="contact" smooth={true} className="text-xl text-indigo-100 tracking-wide transform transition hover:text-white hover:scale-110 cursor-pointer">
+                    <FontAwesomeIcon icon={faEnvelope} />&nbsp;
+                    Contact
+                </Link>
 
             </div>
         </div>

@@ -2,7 +2,6 @@ import {AppProps} from "next/app";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
 import "../styles/tailwind.css";
-import favicon from "../assets/img/favicon.png";
 import banner from "../assets/img/banner.png";
 
 function App({Component, pageProps}: AppProps): JSX.Element {
@@ -10,8 +9,6 @@ function App({Component, pageProps}: AppProps): JSX.Element {
         <>
             <Head>
                 <title>Yohann THEPAUT</title>
-
-                <link rel="icon" href={favicon} />
 
                 <meta name="description" content="Yohann THEPAUT - Page web personnelle" />
                 <meta name="author" content="Yohann THEPAUT <contact@ythepaut.com> (ythepaut)" />
