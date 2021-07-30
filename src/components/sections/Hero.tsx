@@ -17,17 +17,17 @@ function Hero(): JSX.Element {
     return (
         <div className="bg-gray-200 min-h-screen bg-hero items-center justify-center overflow-hidden grid">
 
-            <div className="align-middle space-y-6 text-center pt-40" style={{transform: `translateY(${offsetY/1.7}px)`}}>
+            <div className="align-middle space-y-6 text-center lg:pt-40" style={{transform: `translateY(${offsetY/1.7}px)`}}>
                 <div className="block p-1 rounded-full w-max mx-auto bg-gradient-to-tr from-pink-600 to-yellow-600">
                     <div className="block p-1 rounded-full bg-hero">
                         <img src={logo} alt="Logo" className="h-64 w-64 rounded-full" />
                     </div>
                 </div>
-                <h1 className="text-5xl text-white font-bold">Yohann THEPAUT</h1>
-                <h2 className="text-xl text-white font-light tracking-wider">Étudiant en Cursus Master en Ingénierie Informatique</h2>
+                <h1 className="text-4xl lg:text-5xl text-white font-bold">Yohann THEPAUT</h1>
+                <h2 className="text-md lg:text-xl text-white font-light tracking-wider">Étudiant en Cursus Master en Ingénierie Informatique</h2>
             </div>
 
-            <div className="mx-auto flex space-x-64" style={{opacity: 1 - offsetY / 1080 * 8}}>
+            <div className="mx-auto flex space-x-4 lg:space-x-64" style={{opacity: 1 - offsetY / 1080 * 8}}>
                 <a href="https://github.com/ythepaut" target="_blank" className="text-xl text-indigo-100 tracking-wide transform transition hover:text-white hover:scale-110">
                     <FontAwesomeIcon icon={faGithub} />&nbsp;
                     GitHub
