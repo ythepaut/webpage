@@ -28,7 +28,7 @@ function Hero(): JSX.Element {
                 <h2 className="text-md lg:text-xl text-white font-light tracking-wider">Étudiant en Cursus Master en Ingénierie Informatique</h2>
             </div>
 
-            <div className="mx-auto flex space-x-4 lg:space-x-64" style={{opacity: 1 - offsetY / 1080 * 8}}>
+            <div className="mx-auto flex space-x-4 lg:space-x-64" style={{opacity: Math.max(0, 1 - offsetY / 1080 * 8), visibility: Math.max(0, 1 - offsetY / 1080 * 8) > 0 ? "initial" : "hidden"}}>
                 <a href="https://github.com/ythepaut" target="_blank" className="text-xl text-indigo-100 tracking-wide transform transition hover:text-white hover:scale-110">
                     <FontAwesomeIcon icon={faGithub} />&nbsp;
                     GitHub

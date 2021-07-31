@@ -1,7 +1,7 @@
 import Hero from "../components/sections/Hero";
 import Contact from "../components/sections/Contact";
 
-function Home(): JSX.Element {
+function HomePage(): JSX.Element {
     return (
         <div className="bg-gray-50">
             <Hero />
@@ -10,4 +10,4 @@ function Home(): JSX.Element {
     );
 }
 
-export default Home;
+export default HomePage;
