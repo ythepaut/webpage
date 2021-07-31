@@ -9,8 +9,10 @@ function App({Component, pageProps}: AppProps): JSX.Element {
             <Head>
                 <title>Yohann THEPAUT</title>
 
-                <meta name="description" content="Yohann THEPAUT - Page web personnelle" />
-                <meta name="author" content="Yohann THEPAUT <contact@ythepaut.com> (ythepaut)" />
+                <meta name="subject" content="Yohann THEPAUT - Page web" />
+                <meta name="description" content="Page web personnelle" />
+                <meta name="author" content="Yohann THEPAUT (ythepaut)" />
+                <meta name="keywords" content="yohann thepaut, ythepaut, yohann, thepaut, page web, site web"/>
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.ythepaut.com/" />
                 <meta property="og:title" content="Yohann THEPAUT" />

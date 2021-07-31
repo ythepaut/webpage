@@ -2,6 +2,7 @@ import logo from "../../assets/img/logo.png";
 import React from "react";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 function Footer(): JSX.Element {
     return (
@@ -18,8 +19,12 @@ function Footer(): JSX.Element {
                         </span>
                     </a>
 
-                    <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-                        Page web <a href="https://github.com/ythepaut/webpage" className="text-gray-600 transition hover:text-gray-800" target="_blank">open-source</a> et sous licence <a href="https://github.com/ythepaut/webpage/blob/master/LICENSE" rel="noopener noreferrer" className="text-gray-600 transition hover:text-gray-800" target="_blank">GNU GPL v.3.0</a>
+                    <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 space-x-4">
+                        <span>Page web <a href="https://github.com/ythepaut/webpage" className="text-gray-600 transition hover:text-gray-800" target="_blank">open-source</a> et sous licence <a href="https://github.com/ythepaut/webpage/blob/master/LICENSE" rel="noopener noreferrer" className="text-gray-600 transition hover:text-gray-800" target="_blank">GNU GPL v.3.0</a></span>
+                        <span>|</span>
+                        <Link href="/legal">
+                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">Mentions légales</span>
+                        </Link>
                     </p>
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl space-x-3">
