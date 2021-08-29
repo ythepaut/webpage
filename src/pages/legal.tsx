@@ -1,5 +1,5 @@
 import React from "react";
-import Legal from "../components/sections/Legal";
+import Legal from "../sections/Legal";
 
 function LegalPage(): JSX.Element {
     return (

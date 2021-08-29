@@ -1,9 +1,10 @@
-import {AppProps} from "next/app";
-import Layout from "../components/layout/Layout";
+import App from "next/app";
+import type {AppContext, AppProps} from "next/app";
+import Layout from "../components/Layout";
 import Head from "next/head";
 import "../styles/tailwind.css";
 
-function App({Component, pageProps}: AppProps): JSX.Element {
+function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
             <Head>
@@ -31,4 +32,9 @@ function App({Component, pageProps}: AppProps): JSX.Element {
     );
 }
 
-export default App;
+MyApp.getInitialProps = async (appContext: AppContext) => {
+   const appProps = await App.getInitialProps(appContext);
+   return {...appProps}
+};
+
+export default MyApp;

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import logo from "../../assets/img/logo.png";
+import logo from "../assets/img/logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons"
@@ -18,7 +18,7 @@ function Hero(): JSX.Element {
     return (
         <div className="bg-gray-200 min-h-screen bg-hero items-center justify-center overflow-hidden grid">
 
-            <div className="align-middle space-y-6 text-center lg:pt-36" style={{transform: `translateY(${offsetY/1.7}px)`}}>
+            <div className="align-middle space-y-6 text-center xl:pt-36" style={{transform: `translateY(${offsetY/1.7}px)`}}>
                 <div className="block p-1 rounded-full w-max mx-auto bg-gradient-to-tr from-pink-600 to-yellow-600">
                     <div className="block p-1 rounded-full bg-hero">
                         <img src={logo} alt="Logo" className="h-64 w-64 rounded-full" />

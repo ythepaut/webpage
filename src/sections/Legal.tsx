@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Legal(): JSX.Element {
     return (
-        <div className="bg-gray-200 min-h-screen bg-hero text-white items-center overflow-hidden grid p-4 lg:p-32">
+        <section className="bg-gray-200 min-h-screen bg-hero text-white items-center overflow-hidden grid p-4 lg:p-32">
             <div>
                 <h1 className="sm:text-6xl text-3xl font-medium title-font text-white mb-4 pb-6 lg:text-left text-center">Mentions légales</h1>
                 <p className="sm:text-lg text-sm">
@@ -24,7 +24,7 @@ function Legal(): JSX.Element {
                     </button>
                 </Link>
             </div>
-        </div>
+        </section>
     );
 }
 

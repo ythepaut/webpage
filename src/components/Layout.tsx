@@ -1,5 +1,5 @@
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Nav from "../sections/Nav";
+import Footer from "../sections/Footer";
 
 interface Props {
     children: JSX.Element;

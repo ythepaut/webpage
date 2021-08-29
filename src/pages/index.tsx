@@ -1,10 +1,12 @@
-import Hero from "../components/sections/Hero";
-import Contact from "../components/sections/Contact";
+import Hero from "../sections/Hero";
+import Contact from "../sections/Contact";
+import Projects from "../sections/Projects";
 
 function HomePage(): JSX.Element {
     return (
         <div className="bg-gray-50">
             <Hero />
+            <Projects />
             <Contact />
         </div>
     );
