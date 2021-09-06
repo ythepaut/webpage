@@ -9,7 +9,7 @@ export interface Props {
 
 function ProjectCard(props: Props): JSX.Element {
     return (
-        <div className="p-4 md:w-1/4">
+        <div className="p-4 w-full md:w-1/2 xl:w-1/4">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <div className="w-full object-cover object-center h-1 bg-gradient-to-tr from-pink-600 to-yellow-600" />
                 <div className="p-6">

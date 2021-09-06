@@ -15,7 +15,7 @@ function Contact(): JSX.Element {
     }
 
     return (
-        <section id="contact" className="bg-gray-200 p-6 lg:p-20 text-center">
+        <section id="contact" className="bg-gray-200 p-8 pt-10 lg:p-20 text-center">
             <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900 pb-6">Me contacter</h1>
             {showEmail ?
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base">

@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function Projects(projects: any) {
     return (
-        <section id="projects" className="bg-white p-6 lg:p-20">
+        <section id="projects" className="bg-white p-8 pt-10 lg:p-20">
             <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900 pb-6 text-center">
                 Quelques de mes projets
             </h1>
