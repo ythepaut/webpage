@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const projects = await res.json();
     return !projects ? {notFound: true} : {
         props: {projects: projects},
-        revalidate: 1
+        revalidate: 3600
     };
 }
 
