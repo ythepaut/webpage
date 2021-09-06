@@ -25,6 +25,10 @@ function Footer(): JSX.Element {
                         <Link href="/legal">
                             <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">Mentions légales</span>
                         </Link>
+                        <span>|</span>
+                        <Link href="/privacy-policy">
+                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">Politique de confidentialité</span>
+                        </Link>
                     </p>
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl space-x-3">

@@ -28,6 +28,10 @@ function MyApp({Component, pageProps}: AppProps) {
             <Layout>
                 <Component {...pageProps} />
             </Layout>
+            <script async defer src="https://stats.ythepaut.com/latest.js"/>
+            <noscript>
+                <img src="https://stats.ythepaut.com/noscript.gif" alt="" />
+            </noscript>
         </>
     );
 }
