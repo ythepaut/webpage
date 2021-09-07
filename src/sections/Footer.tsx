@@ -1,10 +1,16 @@
 import logo from "../assets/img/logo.png";
 import React from "react";
-import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin, faFontAwesomeFlag} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import {useTranslations} from "use-intl";
+import {useRouter} from "next/router";
 
 function Footer(): JSX.Element {
+
+    const t = useTranslations("index.footer");
+    const locale = useRouter().locale;
+
     return (
         <footer className="text-gray-600 body-font">
             <div className="bg-gray-100">
@@ -20,18 +26,29 @@ function Footer(): JSX.Element {
                     </a>
 
                     <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 space-x-4">
-                        <span>Page web <a href="https://github.com/ythepaut/webpage" className="text-gray-600 transition hover:text-gray-800" target="_blank">open-source</a> et sous licence <a href="https://github.com/ythepaut/webpage/blob/master/LICENSE" rel="noopener noreferrer" className="text-gray-600 transition hover:text-gray-800" target="_blank">GNU GPL v.3.0</a></span>
+                        <span>
+                            {t.rich("copyleft", {
+                                sourcecode_link: (children) => <a href="https://github.com/ythepaut/webpage" className="text-gray-600 transition hover:text-gray-800" target="_blank">{children}</a>,
+                                license_link: () => <a href="https://github.com/ythepaut/webpage/blob/master/LICENSE" rel="noopener noreferrer" className="text-gray-600 transition hover:text-gray-800" target="_blank">GNU GPL v.3.0</a>
+                            })}
+                        </span>
                         <span>|</span>
                         <Link href="/legal">
-                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">Mentions légales</span>
+                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">{t("legal")}</span>
                         </Link>
                         <span>|</span>
                         <Link href="/privacy-policy">
-                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">Politique de confidentialité</span>
+                            <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">{t("privacy_policy")}</span>
                         </Link>
                     </p>
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl space-x-3">
+                        <Link href={locale == "en" ? "/fr" : "/en"} locale={locale == "en" ? "fr" : "en"}>
+                            <a className="text-gray-500 transition hover:text-gray-800">
+                                <FontAwesomeIcon icon={faFontAwesomeFlag} />&nbsp;<span className="text-sm">{locale == "en" ? "Version française" : "English version"}</span>
+                            </a>
+                        </Link>
+                        <span>|</span>
                         <a className="text-gray-500 transition hover:text-gray-800" target="_blank" href="https://github.com/ythepaut">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>

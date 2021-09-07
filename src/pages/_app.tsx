@@ -1,8 +1,8 @@
-import App from "next/app";
-import type {AppContext, AppProps} from "next/app";
-import Layout from "../components/Layout";
+import type {AppProps} from "next/app";
 import Head from "next/head";
+import Layout from "../components/Layout";
 import "../styles/tailwind.css";
+import {NextIntlProvider} from "next-intl";
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
@@ -25,9 +25,11 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta property="twitter:description" content="Yohann THEPAUT - Page web personnelle" />
                 <meta property="twitter:image" content="/banner.png" />
             </Head>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <NextIntlProvider messages={pageProps.messages}>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </NextIntlProvider>
             <script async defer src="https://stats.ythepaut.com/latest.js"/>
             <noscript>
                 <img src="https://stats.ythepaut.com/noscript.gif" alt="" />
@@ -35,10 +37,5 @@ function MyApp({Component, pageProps}: AppProps) {
         </>
     );
 }
-
-MyApp.getInitialProps = async (appContext: AppContext) => {
-   const appProps = await App.getInitialProps(appContext);
-   return {...appProps}
-};
 
 export default MyApp;

@@ -1,4 +1,5 @@
 import React from "react";
+import {useTranslations} from "use-intl";
 
 export interface Props {
     title: string;
@@ -8,6 +9,9 @@ export interface Props {
 }
 
 function ProjectCard(props: Props): JSX.Element {
+
+    const t = useTranslations("index.projects");
+
     return (
         <div className="p-4 w-full md:w-1/2 xl:w-1/4">
             <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -24,7 +28,7 @@ function ProjectCard(props: Props): JSX.Element {
                     </p>
                     <div className="flex items-center flex-wrap">
                         <a className="text-indigo-500 hover:text-indigo-700 transition inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href={props.repoUrl}>
-                            Dépôt Git
+                            {t("repository")}
                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                                 <path d="M5 12h14"/>
                                 <path d="M12 5l7 7-7 7"/>
