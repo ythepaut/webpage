@@ -2,13 +2,14 @@ import Link from "next/link";
 import React from "react";
 import {GetStaticProps} from "next";
 import {useTranslations} from "use-intl";
+import {motion} from "framer-motion";
 
 function NotFoundPage(): JSX.Element {
 
     const t = useTranslations("404");
 
     return (
-        <div className="py-20 text-center min-h-screen">
+        <motion.div className="py-20 text-center min-h-screen" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: .2}}>
             <h2 className="text-3xl sm:text-6xl lg:text-6xl font-medium pt-10">
                 {t("title")}
             </h2>
@@ -20,7 +21,7 @@ function NotFoundPage(): JSX.Element {
                     {t("back")}
                 </button>
             </Link>
-        </div>
+        </motion.div>
     );
 }
 

@@ -2,14 +2,15 @@ import Hero from "../sections/Hero";
 import Contact from "../sections/Contact";
 import Projects from "../sections/Projects";
 import {GetStaticProps, InferGetStaticPropsType} from "next";
+import {motion} from "framer-motion";
 
 function HomePage({projects, email}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
     return (
-        <div className="bg-gray-50">
+        <motion.div className="bg-gray-50" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: .2}}>
             <Hero />
             <Projects projects={projects}/>
             <Contact email={email} />
-        </div>
+        </motion.div>
     );
 }
 
