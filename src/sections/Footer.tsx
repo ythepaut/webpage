@@ -1,6 +1,7 @@
 import logo from "../assets/img/logo.png";
 import React from "react";
-import {faGithub, faLinkedin, faFontAwesomeFlag} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {useTranslations} from "use-intl";
@@ -44,8 +45,9 @@ function Footer(): JSX.Element {
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl space-x-3">
                         <Link href={locale == "en" ? "/fr" : "/en"} locale={locale == "en" ? "fr" : "en"}>
-                            <a className="text-gray-500 transition hover:text-gray-800">
-                                <FontAwesomeIcon icon={faFontAwesomeFlag} />&nbsp;<span className="text-sm">{locale == "en" ? "Version française" : "English version"}</span>
+                            <a className="transition hover:bg-gray-700 bg-gray-600 text-white text-sm py-1 px-3 rounded-2xl">
+                                <span className="sm:hidden xl:inline-flex"><i className="align-middle"><FontAwesomeIcon icon={faGlobe} /></i>&nbsp;&nbsp;{locale == "en" ? "Version française" : "English version"}</span>
+                                <span className="hidden sm:inline-flex xl:hidden"><i className="align-middle"><FontAwesomeIcon icon={faGlobe} /></i>&nbsp;&nbsp;{locale == "en" ? "FR" : "EN"}</span>
                             </a>
                         </Link>
                         <span>|</span>
