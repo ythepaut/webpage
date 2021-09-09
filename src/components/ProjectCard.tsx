@@ -27,7 +27,7 @@ function ProjectCard(props: Props): JSX.Element {
                         {props.description}
                     </p>
                     <div className="flex items-center flex-wrap">
-                        <a className="text-indigo-500 hover:text-indigo-700 transition inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href={props.repoUrl}>
+                        <a className="text-indigo-500 hover:text-indigo-700 transition inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href={props.repoUrl} rel="noreferrer">
                             {t("repository")}
                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                                 <path d="M5 12h14"/>

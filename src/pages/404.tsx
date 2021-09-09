@@ -16,7 +16,7 @@ function NotFoundPage(): JSX.Element {
             <p className="pt-4">
                 {t("description")}
             </p>
-            <Link href="/">
+            <Link href="/" passHref>
                 <button className="mt-10 flex mx-auto text-indigo-600 sm:text-md md:text-md lg:text-lg border border-indigo-600 py-2 px-8 hover:bg-indigo-50 hover:border-indigo-700 focus:bg-indigo-100 focus:border-indigo-700 rounded transition">
                     {t("back")}
                 </button>

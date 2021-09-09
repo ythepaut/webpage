@@ -15,11 +15,6 @@
             "title": "Let's get in touch !",
             "captcha": "Please complete the CAPTCHA to reveal my contact informations.",
             "info_email": "You can contact me at <link>{email}</link>"
-        },
-        "footer": {
-            "copyleft": "This website is <sourcecode_link>open source</sourcecode_link> and is under the <license_link></license_link> license.",
-            "legal": "Legal notice",
-            "privacy_policy": "Privacy policy"
         }
     },
     "legal": {
@@ -43,5 +38,10 @@
         "title": "This page doesn't exist",
         "description": "Oops. The page you are looking for does not exist or has been moved.",
         "back": "Go back"
+    },
+    "footer": {
+        "copyleft": "This website is <sourcecode_link>open source</sourcecode_link> and is under the <license_link></license_link> license.",
+        "legal": "Legal notice",
+        "privacy_policy": "Privacy policy"
     }
 }

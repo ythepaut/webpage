@@ -15,11 +15,6 @@
             "title": "Me contacter",
             "captcha": "Complétez le CAPTCHA pour afficher mon adresse e-mail.",
             "info_email": "Vous pouvez me contacter par e-mail : <link>{email}</link>"
-        },
-        "footer": {
-            "copyleft": "Page web <sourcecode_link>open-source</sourcecode_link> et sous licence <license_link></license_link>",
-            "legal": "Mentions légales",
-            "privacy_policy": "Politique de confidentialité"
         }
     },
     "legal": {
@@ -43,5 +38,10 @@
         "title": "Page inéxistante",
         "description": "Oups, la page que vous recherchez n'existe pas ou plus.",
         "back": "Retour"
+    },
+    "footer": {
+        "copyleft": "Page web <sourcecode_link>open-source</sourcecode_link> et sous licence <license_link></license_link>",
+        "legal": "Mentions légales",
+        "privacy_policy": "Politique de confidentialité"
     }
 }
