@@ -4,6 +4,7 @@ import "../styles/tailwind.css";
 import {NextIntlProvider} from "next-intl";
 import {AnimatePresence} from "framer-motion";
 import App from "next/app";
+import Image from "next/image";
 
 class MyApp extends App {
     render() {
@@ -37,7 +38,7 @@ class MyApp extends App {
                 </NextIntlProvider>
                 <script async defer src={"https://stats.ythepaut.com/latest.js"}/>
                 <noscript>
-                    <img src="https://stats.ythepaut.com/noscript.gif" alt="" />
+                    <Image src={"https://stats.ythepaut.com/noscript.gif"} alt={""} />
                 </noscript>
             </>
         );

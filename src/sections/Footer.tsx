@@ -9,7 +9,7 @@ import {useRouter} from "next/router";
 
 function Footer(): JSX.Element {
 
-    const t = useTranslations("index.footer");
+    const t = useTranslations("footer");
     const locale = useRouter().locale;
 
     return (
