@@ -11,19 +11,19 @@ function Hero(): JSX.Element {
     const t = useTranslations("index.hero");
 
     const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => setOffsetY(window.pageYOffset);
+    const handleScroll = () => setOffsetY(window.scrollY);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const [windowWidth, setWindowWidth] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(1080);
     const handleResize = () => setWindowWidth(window.innerWidth);
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-        window.addEventListener("load", handleResize)
+        window.addEventListener("load", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
             window.removeEventListener("load", handleResize);
