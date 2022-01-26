@@ -16,7 +16,7 @@
     "file-loader": "^6.2.0",
     "framer-motion": "^4.1.17",
     "next": "12.0.7",
-    "next-intl": "^2.3.3",
+    "next-intl": "^2.3.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-google-recaptcha": "^2.1.0",
