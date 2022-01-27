@@ -15,7 +15,7 @@ function HomePage({projects, email}: InferGetStaticPropsType<typeof getStaticPro
 }
 
 export const getStaticProps: GetStaticProps = async ({locale}) => {
-    const res = await fetch("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=ythepaut");
+    const res = await fetch("https://gh-pinned-repos.egoist.sh/?username=ythepaut");
     const projects = await res.json();
     return !projects ? {notFound: true} : {
         props: {
