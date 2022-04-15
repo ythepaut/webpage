@@ -39,6 +39,10 @@
         "description": "Oups, la page que vous recherchez n'existe pas ou plus.",
         "back": "Retour"
     },
+    "500": {
+        "title": "Une erreur est survenue.",
+        "back": "Retour"
+    },
     "footer": {
         "copyleft": "Page web <sourcecode_link>open-source</sourcecode_link> et sous licence <license_link></license_link>",
         "legal": "Mentions légales",

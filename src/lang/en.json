@@ -39,6 +39,10 @@
         "description": "Oops. The page you are looking for does not exist or has been moved.",
         "back": "Go back"
     },
+    "500": {
+        "title": "An unexpected error occurred.",
+        "back": "Go back"
+    },
     "footer": {
         "copyleft": "This website is <sourcecode_link>open source</sourcecode_link> and is under the <license_link></license_link> license.",
         "legal": "Legal notice",
