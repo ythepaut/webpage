@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-regular-svg-icons"
+import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 
 export default function Hero(): JSX.Element {
