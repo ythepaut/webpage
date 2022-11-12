@@ -17,10 +17,10 @@ export default function handler(
 }
 
 async function getProjects(): Promise<Project[]> {
-    const {publicRuntimeConfig} = getConfig();
+    const {serverRuntimeConfig} = getConfig();
     const graphQLClient = new GraphQLClient("https://api.github.com/graphql", {
         headers: {
-            authorization: "bearer " + publicRuntimeConfig.githubToken,
+            authorization: "bearer " + serverRuntimeConfig.githubToken,
         },
     });
     const query = gql`

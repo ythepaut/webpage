@@ -2,6 +2,7 @@ import Hero from "../components/sections/Hero";
 import {GetStaticProps} from "next";
 import {motion} from "framer-motion";
 import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 
 export default function HomePage(): JSX.Element {
     return (
@@ -14,7 +15,7 @@ export default function HomePage(): JSX.Element {
         >
             <Hero/>
             <Projects />
-            <section className="bg-fuchsia-500" id="contact">Contact</section>
+            <Contact />
         </motion.div>
     );
 }
