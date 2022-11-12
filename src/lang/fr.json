@@ -1,0 +1,51 @@
+{
+    "index": {
+        "hero": {
+            "subtitle": "Étudiant en Cursus Master en Ingénierie Informatique",
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "contact": "Contact"
+        },
+        "projects": {
+            "title": "Quelques projets",
+            "description": "Passionné d'informatique et de technologie, je développe mes compétences durant ma formation et pendant mon temps libre en réalisant divers projets.<br></br>Vous trouverez ci-dessous quelques de mes projets disponibles sur mon GitHub.",
+            "repository": "Dépôt Git"
+        },
+        "contact": {
+            "title": "Me contacter",
+            "captcha": "Complétez le CAPTCHA pour afficher mon adresse e-mail.",
+            "info_email": "Vous pouvez me contacter par e-mail : <link>{email}</link>"
+        }
+    },
+    "legal": {
+        "title": "Mentions légales",
+        "owner": {
+            "title": "Éditeur du site Internet « ythepaut.com » et « www.ythepaut.com » :",
+            "value": "M. THEPAUT Yohann"
+        },
+        "host": {
+            "title": "Hebergeur :",
+            "value": "Le site « ythepaut.com » est hébergé par la société OVH.<br></br>OVHcloud<br></br>2 rue Kellermann<br></br>59100 Roubaix"
+        },
+        "back": "Retour"
+    },
+    "privacy_policy": {
+        "title": "Politique de confidentialité",
+        "description": "Afin d’améliorer la visibilité de ma page web, j'utilise un service tiers pour la récolte de données sur l'utilisation de mon site.<br></br>Les données récoltées ne sont, et ne seront jamais des données personnelles.<br></br><br></br>Vous pouvez consulter la liste exhaustive des informations récoltées sur le site de <simpleanalytics></simpleanalytics><br></br><br></br>Si vous ne souhaitez pas que vos prochaines visites soient enregistrées, veuillez activer l'option \"Do Not Track\" de votre navigateur.",
+        "back": "Retour"
+    },
+    "404": {
+        "title": "Page inéxistante",
+        "description": "Oups, la page que vous recherchez n'existe pas ou plus.",
+        "back": "Retour"
+    },
+    "500": {
+        "title": "Une erreur est survenue.",
+        "back": "Retour"
+    },
+    "footer": {
+        "copyleft": "Page web <sourcecode_link>open-source</sourcecode_link> et sous licence <license_link></license_link>",
+        "legal": "Mentions légales",
+        "privacy_policy": "Politique de confidentialité"
+    }
+}
