@@ -11,7 +11,7 @@ export default function Hero(): JSX.Element {
     const t = useTranslations("index.hero");
 
 
-    const [offsetY, setOffsetY] = useState(0);
+    const [offsetY, setOffsetY] = useState<number>(0);
     const handleScroll = () => setOffsetY(window.scrollY);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export default function Hero(): JSX.Element {
     }, []);
 
 
-    const [windowWidth, setWindowWidth] = useState(1920);
+    const [windowWidth, setWindowWidth] = useState<number>(1920);
     const handleResize = () => setWindowWidth(window.innerWidth);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export default function Hero(): JSX.Element {
 
 
     return (
-        <section className="grid bg-hero items-center">
+        <section className="grid min-h-screen bg-hero items-center overflow-hidden">
 
             <div
                 className="space-y-6 text-center xl:pt-36"

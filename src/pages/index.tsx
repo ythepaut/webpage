@@ -1,6 +1,7 @@
 import Hero from "../components/sections/Hero";
 import {GetStaticProps} from "next";
 import {motion} from "framer-motion";
+import Projects from "../components/sections/Projects";
 
 export default function HomePage(): JSX.Element {
     return (
@@ -12,7 +13,7 @@ export default function HomePage(): JSX.Element {
             transition={{duration: .2}}
         >
             <Hero/>
-            <section className="bg-fuchsia-400">Projects</section>
+            <Projects />
             <section className="bg-fuchsia-500" id="contact">Contact</section>
         </motion.div>
     );
