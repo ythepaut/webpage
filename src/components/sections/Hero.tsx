@@ -70,7 +70,7 @@ export default function Hero(): JSX.Element {
                    className="hero-link">
                     <FontAwesomeIcon icon={faLinkedin}/>&nbsp;&nbsp;{t("linkedin")}
                 </a>
-                <Link href="/#contact" scroll={false} className="hero-link">
+                <Link href="/#contact" scroll={false} className="hero-link" passHref>
                     <FontAwesomeIcon icon={faEnvelope}/>&nbsp;&nbsp;{t("contact")}
                 </Link>
 

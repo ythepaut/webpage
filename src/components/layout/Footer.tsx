@@ -40,13 +40,13 @@ export default function Footer(): JSX.Element {
                             })}
                         </span>
                         <span>|</span>
-                        <Link href="/legal" scroll={false} onClick={() => window.scrollTo(0, 0)}>
+                        <Link href="/legal" scroll={false} onClick={() => window.scrollTo(0, 0)} passHref>
                             <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">
                                 {t("legal")}
                             </span>
                         </Link>
                         <span>|</span>
-                        <Link href="/privacy-policy" scroll={false} onClick={() => window.scrollTo(0, 0)}>
+                        <Link href="/privacy-policy" scroll={false} onClick={() => window.scrollTo(0, 0)} passHref>
                             <span className="text-gray-600 transition hover:text-gray-800 cursor-pointer">
                                 {t("privacy_policy")}
                             </span>
@@ -54,7 +54,7 @@ export default function Footer(): JSX.Element {
                     </p>
 
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-xl space-x-3">
-                        <Link href="" locale={locale == "en" ? "fr" : "en"} scroll={false} onClick={() => window.scrollTo(0, 0)}>
+                        <Link href="" locale={locale == "en" ? "fr" : "en"} scroll={false} onClick={() => window.scrollTo(0, 0)} passHref>
                             <span className="transition hover:bg-gray-700 bg-gray-600 text-white text-sm py-1 px-3 rounded-2xl">
                                 <span className="sm:hidden xl:inline-flex">
                                     <i className="align-middle"><FontAwesomeIcon icon={faGlobe}/></i>
