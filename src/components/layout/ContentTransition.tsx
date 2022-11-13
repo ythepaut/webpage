@@ -6,7 +6,7 @@ interface Props {
     children: JSX.Element;
 }
 
-function ContentTransition({children}: Props): JSX.Element {
+export default function ContentTransition({children}: Props): JSX.Element {
 
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -31,5 +31,3 @@ function ContentTransition({children}: Props): JSX.Element {
         </motion.div>
     );
 }
-
-export default ContentTransition;

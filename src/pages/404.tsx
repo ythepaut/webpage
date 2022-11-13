@@ -1,21 +1,21 @@
-import Hero from "../components/sections/Hero";
+import React from "react";
 import {GetStaticProps} from "next";
+import {useTranslations} from "use-intl";
 import {motion} from "framer-motion";
-import Projects from "../components/sections/Projects";
-import Contact from "../components/sections/Contact";
+import Error from "../components/sections/Error";
 
-export default function HomePage(): JSX.Element {
+export default function NotFoundPage(): JSX.Element {
+
+    const t = useTranslations("404");
+
     return (
         <motion.div
-            className="bg-gray-50"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
             transition={{duration: .2}}
         >
-            <Hero/>
-            <Projects />
-            <Contact />
+            <Error title={t("title")} description={t("description")}/>
         </motion.div>
     );
 }
@@ -23,7 +23,7 @@ export default function HomePage(): JSX.Element {
 export const getStaticProps: GetStaticProps = async ({locale}) => {
     return {
         props: {
-            messages: require(`../lang/${locale}.json`),
-        },
+            messages: require(`../lang/${locale}.json`)
+        }
     };
 };

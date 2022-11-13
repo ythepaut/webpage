@@ -4,7 +4,7 @@ interface Props {
     children: JSX.Element;
 }
 
-function Layout({children}: Props): JSX.Element {
+export default function Layout({children}: Props): JSX.Element {
     return (
         <>
             <main>
@@ -14,5 +14,3 @@ function Layout({children}: Props): JSX.Element {
         </>
     );
 }
-
-export default Layout;

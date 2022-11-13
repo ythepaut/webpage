@@ -19,4 +19,8 @@
     .hero-link {
         @apply text-xl text-indigo-100 tracking-wide cursor-pointer transform transition hover:text-white hover:scale-110;
     }
+
+    .back-button {
+        @apply ;
+    }
 }

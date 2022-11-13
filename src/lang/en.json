@@ -26,26 +26,25 @@
         "host": {
             "title": "Host :",
             "value": "The websites available from the domain « ythepaut.com » are hosted by the OVHcloud company.<br></br>OVHcloud<br></br>2 rue Kellermann<br></br>59100 Roubaix"
-        },
-        "back": "Go back"
+        }
     },
     "privacy_policy": {
         "title": "Privacy Policy",
-        "description": "To improve my website's visibility, I use a thrird-party service to gather data about the use of my portfolio.<br></br>The collected data is not, and will never be personal data.<br></br><br></br>You can view the full list of the data gathered on <simpleanalytics></simpleanalytics>'s website.<br></br><br></br>If you don't want your data to be collected, you may opt-out by enabling the \"Do Not Track\" option from your web browser.",
-        "back": "Go back"
+        "description": "To improve my website's visibility, I use a thrird-party service to gather data about the use of my portfolio.<br></br>The collected data is not, and will never be personal data.<br></br><br></br>You can view the full list of the data gathered on <simpleanalytics></simpleanalytics>'s website.<br></br><br></br>If you don't want your data to be collected, you may opt-out by enabling the \"Do Not Track\" option from your web browser."
     },
     "404": {
         "title": "This page doesn't exist",
-        "description": "Oops. The page you are looking for does not exist or has been moved.",
-        "back": "Go back"
+        "description": "Oops. The page you are looking for does not exist or has been moved."
     },
     "500": {
-        "title": "An unexpected error occurred.",
-        "back": "Go back"
+        "title": "An unexpected error occurred."
     },
     "footer": {
         "copyleft": "This website is <sourcecode_link>open source</sourcecode_link> and is under the <license_link></license_link> license.",
         "legal": "Legal notice",
         "privacy_policy": "Privacy policy"
+    },
+    "shared": {
+        "back": "Go back"
     }
 }

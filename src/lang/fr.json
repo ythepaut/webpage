@@ -26,26 +26,25 @@
         "host": {
             "title": "Hebergeur :",
             "value": "Le site « ythepaut.com » est hébergé par la société OVH.<br></br>OVHcloud<br></br>2 rue Kellermann<br></br>59100 Roubaix"
-        },
-        "back": "Retour"
+        }
     },
     "privacy_policy": {
         "title": "Politique de confidentialité",
-        "description": "Afin d’améliorer la visibilité de ma page web, j'utilise un service tiers pour la récolte de données sur l'utilisation de mon site.<br></br>Les données récoltées ne sont, et ne seront jamais des données personnelles.<br></br><br></br>Vous pouvez consulter la liste exhaustive des informations récoltées sur le site de <simpleanalytics></simpleanalytics><br></br><br></br>Si vous ne souhaitez pas que vos prochaines visites soient enregistrées, veuillez activer l'option \"Do Not Track\" de votre navigateur.",
-        "back": "Retour"
+        "description": "Afin d’améliorer la visibilité de ma page web, j'utilise un service tiers pour la récolte de données sur l'utilisation de mon site.<br></br>Les données récoltées ne sont, et ne seront jamais des données personnelles.<br></br><br></br>Vous pouvez consulter la liste exhaustive des informations récoltées sur le site de <simpleanalytics></simpleanalytics><br></br><br></br>Si vous ne souhaitez pas que vos prochaines visites soient enregistrées, veuillez activer l'option \"Do Not Track\" de votre navigateur."
     },
     "404": {
         "title": "Page inéxistante",
-        "description": "Oups, la page que vous recherchez n'existe pas ou plus.",
-        "back": "Retour"
+        "description": "Oups, la page que vous recherchez n'existe pas ou plus."
     },
     "500": {
-        "title": "Une erreur est survenue.",
-        "back": "Retour"
+        "title": "Une erreur est survenue."
     },
     "footer": {
         "copyleft": "Page web <sourcecode_link>open-source</sourcecode_link> et sous licence <license_link></license_link>",
         "legal": "Mentions légales",
         "privacy_policy": "Politique de confidentialité"
+    },
+    "shared": {
+        "back": "Retour"
     }
 }

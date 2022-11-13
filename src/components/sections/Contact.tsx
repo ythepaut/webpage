@@ -4,7 +4,7 @@ import {useTranslations} from "use-intl";
 import ContentTransition from "../layout/ContentTransition";
 import getConfig from "next/config";
 
-function Contact(): JSX.Element {
+export default function Contact(): JSX.Element {
 
     const t = useTranslations("index.contact");
 
@@ -62,5 +62,3 @@ function Contact(): JSX.Element {
         </section>
     );
 }
-
-export default Contact;
