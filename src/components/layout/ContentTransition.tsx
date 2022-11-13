@@ -13,7 +13,7 @@ export default function ContentTransition({children}: Props): JSX.Element {
 
     useEffect(() => {
         if (inView)
-            controls.start("visible").then(_ => {});
+            controls.start("visible").then();
     }, [controls, inView]);
 
     return (
