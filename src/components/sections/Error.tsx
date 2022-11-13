@@ -1,5 +1,3 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faExternalLinkSquareAlt} from "@fortawesome/free-solid-svg-icons";
 import BackButton from "../shared/BackButton";
 import React from "react";
 import Image from "next/image";

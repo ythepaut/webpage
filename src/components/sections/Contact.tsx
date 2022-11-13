@@ -10,13 +10,28 @@ export default function Contact(): JSX.Element {
 
     const {publicRuntimeConfig} = getConfig();
 
-    const [showEmail, setShowEmail] = useState(false);
+    const [email, setEmail] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const recaptchaRef = useRef<ReCAPTCHA>(null);
 
-    const handleCaptchaResolve = (value: string | null) => {
-        if (value != null)
-            setShowEmail(true);
+    const handleCaptchaResolve = (token: string | null) => {
+        if (token != null) {
+            setLoading(true);
+            fetch(`/api/contact?token=${token}`).then(async res => {
+                if (res.status === 200) {
+                    setEmail((await res.json()).email);
+                } else {
+                    recaptchaRef.current?.reset();
+                }
+                setLoading(false);
+            }).catch(() => {
+                setLoading(false);
+                recaptchaRef.current?.reset();
+            });
+        } else {
+            recaptchaRef.current?.reset();
+        }
     };
 
     return (
@@ -26,23 +41,21 @@ export default function Contact(): JSX.Element {
                 <h1 className="sm:text-4xl text-2xl font-medium title-font text-gray-900 pb-6">{t("title")}</h1>
             </ContentTransition>
 
-            {showEmail ?
+            {email &&
                 <ContentTransition>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                         {t.rich("info_email", {
-                            email: publicRuntimeConfig.contactEmail,
+                            email: email,
                             link: (children => <a className="text-blue-500 transition hover:text-blue-700"
                                                   target="_blank" rel="noreferrer"
                                                   href={"mailto:" + children}>{children}</a>)
                         })}
                     </p>
                 </ContentTransition>
-                :
-                <></>
             }
 
             <ContentTransition>
-                <div className={showEmail ? "invisible h-0" : "grid"}>
+                <div className={!email ? "grid" : "invisible h-0"}>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                         {t("captcha")}
                     </p>
@@ -51,14 +64,22 @@ export default function Contact(): JSX.Element {
                     </div>
                     <div className="mx-auto p-4">
                         <div className="w-min">
-                            <ReCAPTCHA
-                                sitekey={publicRuntimeConfig.recaptchaPublic} onChange={handleCaptchaResolve}
-                                ref={recaptchaRef}
-                            />
+                            <div className={loading ? "grid" : "invisible h-0"}>
+                                <div className="grid animate-pulse place-content-center">
+                                    <div className="w-[304px] h-[76px] bg-gray-300 rounded-lg mb-4"></div>
+                                </div>
+                            </div>
+                            <div className={!loading ? "grid" : "invisible h-0"}>
+                                <ReCAPTCHA
+                                    sitekey={publicRuntimeConfig.recaptchaPublic} onChange={handleCaptchaResolve}
+                                    ref={recaptchaRef}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </ContentTransition>
+
         </section>
     );
 }

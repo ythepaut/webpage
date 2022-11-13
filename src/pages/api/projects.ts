@@ -3,17 +3,19 @@ import {gql, GraphQLClient} from "graphql-request";
 import {Project} from "../../components/sections/Projects";
 import getConfig from "next/config";
 
-export default function handler(
-    req: NextApiRequest,
-    res: NextApiResponse<any[]>
-) {
-    if (req.method === "GET") {
-        getProjects().then(projects => {
-            return res.status(200).json(projects);
-        });
-    } else {
-        return res.status(405);
-    }
+export default function handler(req: NextApiRequest, res: NextApiResponse<Project[]>) {
+    return new Promise((resolve, reject) => {
+        if (req.method === "GET") {
+            getProjects().then(projects => {
+                res.status(200).json(projects);
+                res.end();
+                resolve({});
+            });
+        } else {
+            res.status(405).end();
+            reject();
+        }
+    });
 }
 
 async function getProjects(): Promise<Project[]> {
