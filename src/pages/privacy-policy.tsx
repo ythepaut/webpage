@@ -2,7 +2,7 @@ import {GetStaticProps} from "next";
 import {motion} from "framer-motion";
 import PrivacyPolicy from "../components/sections/PrivacyPolicy";
 
-export default function HomePage(): JSX.Element {
+export default function PrivacyPolicyPage(): JSX.Element {
     return (
         <motion.div
             initial={{opacity: 0}}
