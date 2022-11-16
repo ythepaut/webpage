@@ -32,6 +32,7 @@ jobs:
           CONTACT_EMAIL_ADDRESS: "test@example.com"
           RECAPTCHA_PRIVATE_KEY: "abc"
           RECAPTCHA_SITE_KEY: "abc"
+          ENVIRONMENT: "test"
         with:
           build: npm run build
           start: npm start

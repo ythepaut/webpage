@@ -4,13 +4,22 @@ import {Project} from "../../components/sections/Projects";
 import getConfig from "next/config";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project[]>) {
+
+    const {serverRuntimeConfig} = getConfig();
+
     return new Promise((resolve, reject) => {
         if (req.method === "GET") {
-            getProjects().then(projects => {
-                res.status(200).json(projects);
+            if (serverRuntimeConfig.environment === "production") {
+                getProjects().then(projects => {
+                    res.status(200).json(projects);
+                    res.end();
+                    resolve({});
+                });
+            } else {
+                res.status(200).json([]);
                 res.end();
                 resolve({});
-            });
+            }
         } else {
             res.status(405).end();
             reject();
