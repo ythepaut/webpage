@@ -27,7 +27,7 @@ jobs:
       - name: Install modules
         run: npm install
       - name: Run tests
-        run: npm run test
+        run: npm run test --coverage
         env:
           GITHUB_PERSONAL_ACCESS_TOKEN: "abc"
           CONTACT_EMAIL_ADDRESS: "test@example.com"
