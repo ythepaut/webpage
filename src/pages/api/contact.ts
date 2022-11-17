@@ -8,18 +8,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         if (req.method === "GET") {
             if (typeof req.query.token === "string") {
-                verifyCaptcha(serverRuntimeConfig.recaptchaPrivate, req.query.token).then(success => {
-                    if (success) {
-                        res.status(200).json({
-                            email: serverRuntimeConfig.contactEmail
-                        });
-                        res.end();
-                        resolve({});
-                    } else {
-                        res.status(401).end();
-                        resolve({});
-                    }
-                });
+                if (serverRuntimeConfig.environment === "production") {
+                    verifyCaptcha(serverRuntimeConfig.recaptchaPrivate, req.query.token).then(success => {
+                        if (success) {
+                            res.status(200).json({
+                                email: serverRuntimeConfig.contactEmail
+                            });
+                            res.end();
+                            resolve({});
+                        } else {
+                            res.status(401).end();
+                            resolve({});
+                        }
+                    });
+                } else {
+                    res.status(200).json({
+                        email: serverRuntimeConfig.contactEmail
+                    });
+                    res.end();
+                }
             } else {
                 res.status(400).end();
                 resolve({});
