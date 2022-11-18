@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
             }
         } else {
             res.status(405).end();
-            reject();
+            resolve({});
         }
     });
 }
