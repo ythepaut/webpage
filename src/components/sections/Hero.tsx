@@ -5,11 +5,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
+import getConfig from "next/config";
 
 export default function Hero(): JSX.Element {
 
     const t = useTranslations("index.hero");
-
+    const {publicRuntimeConfig} = getConfig();
 
     const [offsetY, setOffsetY] = useState<number>(0);
     const handleScroll = () => setOffsetY(window.scrollY);
@@ -46,7 +47,7 @@ export default function Hero(): JSX.Element {
                     </div>
                 </div>
                 <h1 className="text-4xl lg:text-5xl text-white font-bold">
-                    Yohann THEPAUT
+                    {publicRuntimeConfig.name}
                 </h1>
                 <h2 className="text-md lg:text-xl text-white font-light tracking-wider">
                     {t("subtitle")}
@@ -63,10 +64,11 @@ export default function Hero(): JSX.Element {
                     : {}
                 }
             >
-                <a href="https://github.com/ythepaut" target="_blank" rel="noreferrer" className="hero-link">
+                <a href={`https://github.com/${publicRuntimeConfig.githubUsername}`} target="_blank" rel="noreferrer"
+                   className="hero-link">
                     <FontAwesomeIcon icon={faGithub}/>&nbsp;&nbsp;{t("github")}
                 </a>
-                <a href="https://www.linkedin.com/in/yohann-thepaut-340037150/" target="_blank" rel="noreferrer"
+                <a href={publicRuntimeConfig.linkedinUrl} target="_blank" rel="noreferrer"
                    className="hero-link">
                     <FontAwesomeIcon icon={faLinkedin}/>&nbsp;&nbsp;{t("linkedin")}
                 </a>

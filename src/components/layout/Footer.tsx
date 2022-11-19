@@ -6,11 +6,13 @@ import Link from "next/link";
 import {useTranslations} from "use-intl";
 import {useRouter} from "next/router";
 import Image from "next/image";
+import getConfig from "next/config";
 
 export default function Footer(): JSX.Element {
 
     const t = useTranslations("footer");
     const locale = useRouter().locale;
+    const {publicRuntimeConfig} = getConfig();
 
     return (
         <footer className="text-gray-600 body-font">
@@ -22,7 +24,7 @@ export default function Footer(): JSX.Element {
                             <Image src="/logo.png" alt="" width={32} height={32} className="rounded-full"/>
                         </div>
                         <span className="ml-3 text-xl">
-                            Yohann THEPAUT
+                            {publicRuntimeConfig.name}
                         </span>
                     </a>
 
@@ -70,12 +72,12 @@ export default function Footer(): JSX.Element {
                         </Link>
                         <span>|</span>
                         <a className="text-gray-500 transition hover:text-gray-800" target="_blank"
-                           href="https://github.com/ythepaut" rel="noreferrer"
+                           href={`https://github.com/${publicRuntimeConfig.githubUsername}`} rel="noreferrer"
                         >
                             <FontAwesomeIcon icon={faGithub}/>
                         </a>
                         <a className="text-gray-500 transition hover:text-gray-800" target="_blank"
-                           href="https://www.linkedin.com/in/yohann-thepaut-340037150/" rel="noreferrer"
+                           href={publicRuntimeConfig.linkedinUrl} rel="noreferrer"
                         >
                             <FontAwesomeIcon icon={faLinkedin}/>
                         </a>

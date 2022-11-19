@@ -4,6 +4,7 @@ import {Project} from "../../components/sections/Projects";
 import getConfig from "next/config";
 
 const projectMocks: Project[] = [1, 2, 3, 4].map(i => ({
+    owner: "Mock",
     name: `Projet ${i}`,
     description: `Description ${i}`,
     language: "Langage",
@@ -35,7 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
 }
 
 async function getProjects(): Promise<Project[]> {
-    const {serverRuntimeConfig} = getConfig();
+    const {publicRuntimeConfig, serverRuntimeConfig} = getConfig();
     const graphQLClient = new GraphQLClient("https://api.github.com/graphql", {
         headers: {
             authorization: "bearer " + serverRuntimeConfig.githubToken,
@@ -43,10 +44,13 @@ async function getProjects(): Promise<Project[]> {
     });
     const query = gql`
         {
-            user(login: "ythepaut") {
+            user(login: "${publicRuntimeConfig.githubUsername}") {
                 pinnedItems(first: 4, types: REPOSITORY) {
                     nodes {
                         ... on Repository {
+                            owner {
+                                login
+                            }
                             name
                             description
                             url
@@ -61,6 +65,7 @@ async function getProjects(): Promise<Project[]> {
     `;
     return (await graphQLClient.request(query)).user.pinnedItems.nodes.map((node: any) => {
         return {
+            owner: node.owner.login,
             name: node.name,
             description: node.description,
             url: node.url,

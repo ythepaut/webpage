@@ -4,6 +4,7 @@ import ProjectCard, {ProjectCardSkeleton} from "../ProjectCard";
 import {useEffect, useState} from "react";
 
 export interface Project {
+    owner: string;
     name: string;
     description: string;
     language: string;
@@ -13,7 +14,6 @@ export interface Project {
 export default function Projects(): JSX.Element {
 
     const t = useTranslations("index.projects");
-
 
     const [projects, setProjects] = useState<Project[] | null>(null);
     useEffect(() => {

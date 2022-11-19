@@ -1,6 +1,7 @@
 import React from "react";
 import {useTranslations} from "use-intl";
 import {Project} from "./sections/Projects";
+import getConfig from "next/config";
 
 export interface Props {
     project: Project;
@@ -9,6 +10,7 @@ export interface Props {
 export default function ProjectCard({project}: Props): JSX.Element {
 
     const t = useTranslations("index.projects");
+    const {publicRuntimeConfig} = getConfig();
 
     return (
         <div className="p-4 w-full md:w-1/2 xl:w-1/4">
@@ -16,7 +18,10 @@ export default function ProjectCard({project}: Props): JSX.Element {
                 <div className="w-full object-cover object-center h-1 bg-gradient-to-tr from-pink-600 to-yellow-600" />
                 <div className="p-6">
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-1">
-                        {project.name}
+                        {project.owner === publicRuntimeConfig.githubUsername
+                            ? <>{project.name}</>
+                            : <><span className="font-light">{project.owner}/</span>{project.name}</>
+                        }
                     </h1>
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3">
                         {project.language}
