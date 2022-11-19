@@ -3,11 +3,18 @@ import {gql, GraphQLClient} from "graphql-request";
 import {Project} from "../../components/sections/Projects";
 import getConfig from "next/config";
 
+const projectMocks: Project[] = [1, 2, 3, 4].map(i => ({
+    name: `Projet ${i}`,
+    description: `Description ${i}`,
+    language: "Langage",
+    url: "#"
+}));
+
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project[]>) {
 
     const {serverRuntimeConfig} = getConfig();
 
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
         if (req.method === "GET") {
             if (serverRuntimeConfig.environment === "production") {
                 getProjects().then(projects => {
@@ -16,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
                     resolve({});
                 });
             } else {
-                res.status(200).json([]);
+                res.status(200).json(projectMocks);
                 res.end();
                 resolve({});
             }
