@@ -1,17 +1,17 @@
-import Legal from "../../../src/components/sections/Legal";
+import Footer from "../../../src/components/layout/Footer";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
 import "../../mocks/router.mock";
 import "../../mocks/intersection-observer.mock";
 
-describe("Legal Section Component", () => {
+describe("Footer Layout Component", () => {
     it("should render", () => {
         render(
             <NextIntlProvider messages={{}} locale={"fr"}>
-                <Legal />
+                <Footer />
             </NextIntlProvider>
         );
 
-        expect(screen.getByText("legal.title")).toBeInTheDocument();
+        expect(screen.getByText("footer.privacy_policy")).toBeInTheDocument();
     });
 });

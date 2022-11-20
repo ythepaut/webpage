@@ -1,7 +1,7 @@
 import Projects from "../../../src/components/sections/Projects";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
-import "../../mocks/translate.mock";
+import "../../mocks/router.mock";
 import "../../mocks/intersection-observer.mock";
 import {expect} from "@jest/globals";
 

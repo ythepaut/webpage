@@ -1,7 +1,7 @@
 import Contact from "../../../src/components/sections/Contact";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
-import "../../mocks/translate.mock";
+import "../../mocks/router.mock";
 import "../../mocks/intersection-observer.mock";
 
 describe("Contact Section Component", () => {

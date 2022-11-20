@@ -1,4 +1,4 @@
 export const useRouter = jest.spyOn(require("next/router"), "useRouter");
-useRouter.mockImplementationOnce(() => ({
+useRouter.mockImplementation(() => ({
     query: { locale: "fr" }
 }));

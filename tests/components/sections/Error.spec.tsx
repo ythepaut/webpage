@@ -1,7 +1,7 @@
 import Error from "../../../src/components/sections/Error";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
-import "../../mocks/translate.mock";
+import "../../mocks/router.mock";
 
 describe("Error Section Component", () => {
     it("should render", () => {

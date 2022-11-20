@@ -1,7 +1,7 @@
 import ProjectCard, {ProjectCardSkeleton} from "../../src/components/ProjectCard";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
-import "../mocks/translate.mock";
+import "../mocks/router.mock";
 
 describe("ProjectCard Component", () => {
 

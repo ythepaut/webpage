@@ -2,7 +2,7 @@ import BackButton from "../../../src/components/shared/BackButton";
 import {render} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
 import {expect} from "@jest/globals";
-import "../../mocks/translate.mock";
+import "../../mocks/router.mock";
 
 describe("BackButton Component", () => {
 
