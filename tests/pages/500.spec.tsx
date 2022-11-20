@@ -1,4 +1,4 @@
-import {getStaticProps} from "../../src/pages/404";
+import {getStaticProps} from "../../src/pages/500";
 import {expect} from "@jest/globals";
 
 describe("500 Error Page", () => {

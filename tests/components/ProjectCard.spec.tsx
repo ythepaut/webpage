@@ -1,20 +1,15 @@
 import ProjectCard, {ProjectCardSkeleton} from "../../src/components/ProjectCard";
 import {render, screen} from "@testing-library/react";
 import {NextIntlProvider} from "next-intl";
+import "../mocks/translate.mock";
 
 describe("ProjectCard Component", () => {
-
-    beforeAll(() => {
-        const useRouter = jest.spyOn(require("next/router"), "useRouter");
-        useRouter.mockImplementationOnce(() => ({
-            query: { locale: "fr" }
-        }));
-    });
 
     it("should render", () => {
         render(
             <NextIntlProvider messages={{}} locale={"fr"}>
                 <ProjectCard project={{
+                    owner: "Owner",
                     name: "Name",
                     description: "Description",
                     language: "Language",

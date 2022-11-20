@@ -19,7 +19,7 @@ function PrivacyPolicy(): JSX.Element {
                         br: () => <br />,
                         simpleanalytics: () => <a href="https://docs.simpleanalytics.com/what-we-collect?ref=ythepaut.com"
                                                   target="_blank"
-                                                  className="text-indigo-700 hover:text-indigo-300 font-bold transition"
+                                                  className="text-indigo-700 hover:text-indigo-400 font-bold transition"
                                                   rel="noreferrer">
                             Simple Analytics&nbsp;<sup><FontAwesomeIcon icon={faExternalLinkSquareAlt}/></sup>
                         </a>
