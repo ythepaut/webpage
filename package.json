@@ -11,7 +11,8 @@
         "cypress:headless": "cypress run",
         "e2e": "start-server-and-test start http://localhost:3000 cypress",
         "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -48,6 +49,15 @@
         "postcss": "^8.4.19",
         "start-server-and-test": "^1.14.0",
         "tailwindcss": "^3.2.4",
-        "ts-node": "^10.9.1"
+        "ts-node": "^10.9.1",
+        "husky": "^8.0.0",
+        "prettier": "^2.8.0",
+        "lint-staged": "^13.0.4",
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": "eslint --cache --fix",
+        "*.{js,ts,tsx,css,md}": "prettier --write"
     }
 }
