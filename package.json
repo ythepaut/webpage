@@ -20,9 +20,6 @@
         "@fortawesome/free-regular-svg-icons": "^6.2.1",
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@types/node": "18.11.9",
-        "@types/react": "18.0.25",
-        "@types/react-dom": "18.0.9",
         "eslint": "8.28.0",
         "eslint-config-next": "13.0.4",
         "framer-motion": "^7.6.9",
@@ -33,10 +30,12 @@
         "react-dom": "18.2.0",
         "react-google-recaptcha": "^2.1.0",
         "react-intersection-observer": "^9.4.1",
-        "sharp": "^0.31.2",
-        "typescript": "4.9.3"
+        "sharp": "^0.31.2"
     },
     "devDependencies": {
+        "@types/node": "18.11.9",
+        "@types/react": "18.0.25",
+        "@types/react-dom": "18.0.9",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
         "@types/jest": "^29.2.3",
@@ -50,6 +49,7 @@
         "start-server-and-test": "^1.14.0",
         "tailwindcss": "^3.2.4",
         "ts-node": "^10.9.1",
+        "typescript": "4.9.3",
         "husky": "^8.0.0",
         "prettier": "^2.8.0",
         "lint-staged": "^13.0.4",
