@@ -1,24 +1,23 @@
-import {NextApiRequest, NextApiResponse} from "next";
-import {gql, GraphQLClient} from "graphql-request";
-import {Project} from "../../components/sections/Projects";
+import { NextApiRequest, NextApiResponse } from "next";
+import { gql, GraphQLClient } from "graphql-request";
+import { Project } from "../../components/sections/Projects";
 import getConfig from "next/config";
 
-const projectMocks: Project[] = [1, 2, 3, 4].map(i => ({
+const projectMocks: Project[] = [1, 2, 3, 4].map((i) => ({
     owner: "Mock",
     name: `Projet ${i}`,
     description: `Description ${i}`,
     language: "Langage",
-    url: "#"
+    url: "#",
 }));
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Project[]>) {
+    const { serverRuntimeConfig } = getConfig();
 
-    const {serverRuntimeConfig} = getConfig();
-
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
         if (req.method === "GET") {
             if (serverRuntimeConfig.environment === "production") {
-                getProjects().then(projects => {
+                getProjects().then((projects) => {
                     res.status(200).json(projects);
                     res.end();
                     resolve({});
@@ -36,7 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Projec
 }
 
 async function getProjects(): Promise<Project[]> {
-    const {publicRuntimeConfig, serverRuntimeConfig} = getConfig();
+    const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
     const graphQLClient = new GraphQLClient("https://api.github.com/graphql", {
         headers: {
             authorization: "bearer " + serverRuntimeConfig.githubToken,
@@ -63,13 +62,16 @@ async function getProjects(): Promise<Project[]> {
             }
         }
     `;
-    return (await graphQLClient.request(query)).user.pinnedItems.nodes.map((node: any) => {
-        return {
-            owner: node.owner.login,
-            name: node.name,
-            description: node.description,
-            url: node.url,
-            language: node.primaryLanguage.name
-        };
-    });
+    const result = (await graphQLClient.request(query)) as any;
+    if (result)
+        return result.user.pinnedItems.nodes.map((node: any) => {
+            return {
+                owner: node.owner.login,
+                name: node.name,
+                description: node.description,
+                url: node.url,
+                language: node.primaryLanguage.name,
+            };
+        });
+    return [];
 }
