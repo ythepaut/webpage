@@ -1,9 +1,8 @@
 import React from "react";
-import {useTranslations} from "use-intl";
+import { useTranslations } from "use-intl";
 import BackButton from "../shared/BackButton";
 
 export default function Legal(): JSX.Element {
-
     const t = useTranslations("legal");
 
     return (
@@ -13,13 +12,16 @@ export default function Legal(): JSX.Element {
                     {t("title")}
                 </h1>
                 <p className="sm:text-lg text-sm">
-                    <span className="font-medium">{t("owner.title")}</span><br />
-                    <span className="ml-8">{t("owner.value")}</span><br />
+                    <span className="font-medium">{t("owner.title")}</span>
                     <br />
-                    <span className="font-medium">{t("host.title")}</span><br />
+                    <span className="ml-8">{t("owner.value")}</span>
+                    <br />
+                    <br />
+                    <span className="font-medium">{t("host.title")}</span>
+                    <br />
                     <p className="ml-8">
                         {t.rich("host.value", {
-                            br: () => <br />
+                            br: () => <br />,
                         })}
                     </p>
                 </p>

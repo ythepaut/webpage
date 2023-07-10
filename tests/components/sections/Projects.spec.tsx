@@ -1,12 +1,11 @@
 import Projects from "../../../src/components/sections/Projects";
-import {render, screen} from "@testing-library/react";
-import {NextIntlProvider} from "next-intl";
+import { render, screen } from "@testing-library/react";
+import { NextIntlProvider } from "next-intl";
 import "../../mocks/router.mock";
 import "../../mocks/intersection-observer.mock";
-import {expect} from "@jest/globals";
+import { expect } from "@jest/globals";
 
 describe("Projects Section Component", () => {
-
     beforeAll(() => {
         // @ts-ignore
         global.fetch = jest.fn(() =>

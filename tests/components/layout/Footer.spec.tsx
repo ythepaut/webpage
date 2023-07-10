@@ -1,6 +1,6 @@
 import Footer from "../../../src/components/layout/Footer";
-import {render, screen} from "@testing-library/react";
-import {NextIntlProvider} from "next-intl";
+import { render, screen } from "@testing-library/react";
+import { NextIntlProvider } from "next-intl";
 import "../../mocks/router.mock";
 import "../../mocks/intersection-observer.mock";
 

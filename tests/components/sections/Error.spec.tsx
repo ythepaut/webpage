@@ -1,6 +1,6 @@
 import Error from "../../../src/components/sections/Error";
-import {render, screen} from "@testing-library/react";
-import {NextIntlProvider} from "next-intl";
+import { render, screen } from "@testing-library/react";
+import { NextIntlProvider } from "next-intl";
 import "../../mocks/router.mock";
 
 describe("Error Section Component", () => {
