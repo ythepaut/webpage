@@ -1,11 +1,10 @@
 import React from "react";
-import {faExternalLinkSquareAlt} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useTranslations} from "use-intl";
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslations } from "use-intl";
 import BackButton from "../shared/BackButton";
 
 function PrivacyPolicy(): JSX.Element {
-
     const t = useTranslations("privacy_policy");
 
     return (
@@ -17,12 +16,19 @@ function PrivacyPolicy(): JSX.Element {
                 <p className="sm:text-lg text-sm">
                     {t.rich("description", {
                         br: () => <br />,
-                        simpleanalytics: () => <a href="https://docs.simpleanalytics.com/what-we-collect?ref=ythepaut.com"
-                                                  target="_blank"
-                                                  className="text-indigo-700 hover:text-indigo-400 font-bold transition"
-                                                  rel="noreferrer">
-                            Simple Analytics&nbsp;<sup><FontAwesomeIcon icon={faExternalLinkSquareAlt}/></sup>
-                        </a>
+                        simpleanalytics: () => (
+                            <a
+                                href="https://docs.simpleanalytics.com/what-we-collect?ref=ythepaut.com"
+                                target="_blank"
+                                className="text-indigo-700 hover:text-indigo-400 font-bold transition"
+                                rel="noreferrer"
+                            >
+                                Simple Analytics&nbsp;
+                                <sup>
+                                    <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+                                </sup>
+                            </a>
+                        ),
                     })}
                 </p>
                 <BackButton />

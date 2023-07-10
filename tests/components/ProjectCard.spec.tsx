@@ -1,20 +1,21 @@
-import ProjectCard, {ProjectCardSkeleton} from "../../src/components/ProjectCard";
-import {render, screen} from "@testing-library/react";
-import {NextIntlProvider} from "next-intl";
+import ProjectCard, { ProjectCardSkeleton } from "../../src/components/ProjectCard";
+import { render, screen } from "@testing-library/react";
+import { NextIntlProvider } from "next-intl";
 import "../mocks/router.mock";
 
 describe("ProjectCard Component", () => {
-
     it("should render", () => {
         render(
             <NextIntlProvider messages={{}} locale={"fr"}>
-                <ProjectCard project={{
-                    owner: "Owner",
-                    name: "Name",
-                    description: "Description",
-                    language: "Language",
-                    url: "URL"
-                }} />
+                <ProjectCard
+                    project={{
+                        owner: "Owner",
+                        name: "Name",
+                        description: "Description",
+                        language: "Language",
+                        url: "URL",
+                    }}
+                />
             </NextIntlProvider>
         );
 

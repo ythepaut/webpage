@@ -1,16 +1,15 @@
 import React from "react";
-import {useTranslations} from "use-intl";
-import {Project} from "./sections/Projects";
+import { useTranslations } from "use-intl";
+import { Project } from "./sections/Projects";
 import getConfig from "next/config";
 
 export interface Props {
     project: Project;
 }
 
-export default function ProjectCard({project}: Props): JSX.Element {
-
+export default function ProjectCard({ project }: Props): JSX.Element {
     const t = useTranslations("index.projects");
-    const {publicRuntimeConfig} = getConfig();
+    const { publicRuntimeConfig } = getConfig();
 
     return (
         <div className="p-4 w-full md:w-1/2 xl:w-1/4">
@@ -18,23 +17,28 @@ export default function ProjectCard({project}: Props): JSX.Element {
                 <div className="w-full object-cover object-center h-1 bg-gradient-to-tr from-pink-600 to-yellow-600" />
                 <div className="p-6">
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-1">
-                        {project.owner === publicRuntimeConfig.githubUsername
-                            ? <>{project.name}</>
-                            : <><span className="font-light">{project.owner}/</span>{project.name}</>
-                        }
+                        {project.owner === publicRuntimeConfig.githubUsername ? (
+                            <>{project.name}</>
+                        ) : (
+                            <>
+                                <span className="font-light">{project.owner}/</span>
+                                {project.name}
+                            </>
+                        )}
                     </h1>
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3">
-                        {project.language}
-                    </h2>
-                    <p className="leading-relaxed mb-3 h-14 overflow-hidden">
-                        {project.description}
-                    </p>
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-3">{project.language}</h2>
+                    <p className="leading-relaxed mb-3 h-14 overflow-hidden">{project.description}</p>
                     <div className="flex items-center flex-wrap">
-                        <a className="text-indigo-500 hover:text-indigo-700 transition inline-flex items-center md:mb-2 lg:mb-0" target="_blank" href={project.url} rel="noreferrer">
+                        <a
+                            className="text-indigo-500 hover:text-indigo-700 transition inline-flex items-center md:mb-2 lg:mb-0"
+                            target="_blank"
+                            href={project.url}
+                            rel="noreferrer"
+                        >
                             {t("repository")}
                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                                <path d="M5 12h14"/>
-                                <path d="M12 5l7 7-7 7"/>
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
                             </svg>
                         </a>
                     </div>
