@@ -20,17 +20,17 @@
         "@fortawesome/free-regular-svg-icons": "^6.4.0",
         "@fortawesome/free-solid-svg-icons": "^6.4.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "eslint": "8.44.0",
-        "eslint-config-next": "13.4.9",
+        "eslint": "8.45.0",
+        "eslint-config-next": "13.4.10",
         "framer-motion": "^10.12.21",
         "graphql-request": "^6.1.0",
-        "next": "13.4.9",
+        "next": "13.4.10",
         "next-intl": "^2.17.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-google-recaptcha": "^3.1.0",
         "react-intersection-observer": "^9.5.2",
-        "sharp": "^0.32.2"
+        "sharp": "^0.32.3"
     },
     "devDependencies": {
         "@types/node": "18.11.9",
