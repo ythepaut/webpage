@@ -1,14 +1,14 @@
 {
     "index": {
         "hero": {
-            "subtitle": "Étudiant en Cursus Master en Ingénierie Informatique et Développeur Full Stack",
+            "subtitle": "Développeur Full Stack",
             "github": "GitHub",
             "linkedin": "LinkedIn",
             "contact": "Contact"
         },
         "projects": {
             "title": "Quelques projets",
-            "description": "Passionné d'informatique et de technologie, je développe mes compétences durant ma formation et pendant mon temps libre en réalisant divers projets.<br></br>Vous trouverez ci-dessous quelques de mes projets disponibles sur mon GitHub.",
+            "description": "Passionné d'informatique, je développe continuellement mes compétences en réalisant divers projets.<br></br>Vous trouverez ci-dessous certains de mes projets disponibles sur mon GitHub.",
             "repository": "Dépôt Git"
         },
         "contact": {

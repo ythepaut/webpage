@@ -1,14 +1,14 @@
 {
     "index": {
         "hero": {
-            "subtitle": "Student in Computer Science Engineering and Full Stack Developer",
+            "subtitle": "Full Stack Developer",
             "github": "GitHub",
             "linkedin": "LinkedIn",
             "contact": "Contact"
         },
         "projects": {
             "title": "Some of my projects",
-            "description": "Passionate about computers and technology, I develop my skills during my training and in my free time by carrying out various projects.<br></br>You will find below some of my projects available on my GitHub.",
+            "description": "Passionate about computer science and technology, I continuously develop my skills by undertaking various projects.<br></br>Below, you can find some of my projects available on my GitHub.",
             "repository": "Git repository"
         },
         "contact": {
